@@ -1,0 +1,306 @@
+<HTML>
+<HEAD>
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#ECECFF;
+color:#000000;
+width:140px;
+padding:2px;
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}
+
+.submenu{
+margin-bottom: 0.5em;
+}
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Switch Menu script- by Martial B of http://getElementById.com/
+* Modified by Dynamic Drive for format & NS4/IE4 compatibility
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+		if(el.style.display != "block"){ //DynamicDrive.com change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") //DynamicDrive.com change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+<TITLE>Fleet</TITLE>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<LINK HREF="style.css" TYPE="text/css" REL="stylesheet">
+</HEAD>
+<BODY BGCOLOR=#1D2D41 LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<!-- ImageReady Slices (1 - Home.psd - Slices: 03, left, right) -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" background="images/left_px.jpg" style="background-position:top; background-repeat:repeat-x "><img src="images/spacer.gif"></td>
+    <td valign="top"><TABLE WIDTH=778 BORDER=0 CELLPADDING=0 CELLSPACING=0 align="center">
+	<TR>
+		<TD>
+			<IMG SRC="images/left.jpg" WIDTH=26 HEIGHT=902 ALT=""></TD>
+		<TD WIDTH=727 HEIGHT=902 ALT="" valign="top">
+		  <TABLE WIDTH=727 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD>
+			<IMG SRC="images/spacer.gif" WIDTH=727 HEIGHT=57 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=727 HEIGHT=397 ALT="" valign="top">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="727" height="397">
+            <param name="movie" value="flash/header.swf">
+            <param name="quality" value="high">
+            <embed src="flash/header.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="727" height="397"></embed>
+		    </object>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=727 HEIGHT=296 ALT="" valign="top" background="images/px.jpg">
+		<table width="727" height="296" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="202" valign="top">
+	<div style="margin-left:7px; margin-top:6px "><table border="0" cellspacing="0" cellpadding="1" bgcolor="#FFFFFF">
+  <tr><td valign="top"><table width="187" height="270" border="0" cellspacing="0" cellpadding="0" bgcolor="#DBE5EC">
+  <tr>
+    <td width="187" valign="top">
+	<div style="margin-left:14px; margin-top:17px "><img src="images/4txt1.jpg" width="150" height="12"></div>
+	<div style="margin-left:8px; margin-top:12px; width:166px">
+Private Jet<br>
+Private Helicopter<br>
+Security Detail<br>
+Particular Beverage or Snack<br>
+Other Requests</div>
+	
+	<div style="margin-left:8px; margin-top:7px; width:166px" class="bluesmall">
+	Should a client need a helicopter or private jet, Fashion Limousine will make those arrangements for you. Not only do we service all the major airports in the Metro New York area, but many of the smaller ones as well.</div>
+		
+	</td>	
+  </tr>
+</table>
+</td></tr>
+</table>
+</div>
+	</td>
+    <td width="525" valign="top">
+	<div style="height:3px; background-image:url(images/px1.jpg) "><img src="images/spacer.gif"></div>
+	<table width="525" height="293" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="194" valign="top">
+	<div style="margin-left:12px; margin-top:22px "><img src="images/4txt2.jpg" width="180" height="12"></div>
+	<div style="margin-left:14px; margin-top:12px; width:180px ">
+	<div style="margin-top:-5px ">Our vehicles are all 2005 models, with leather seats, plush wall to wall carpeting, climate control, tinted windows, and noiseless interior. Our SUVs are equipped with navigation and home-entertainment systems. Among these brand-new cars, and to add that special touch when you travel, you can choose from the cars to the right. </div>
+
+</div></td>
+    <td width="331" valign="top">
+	<table width="323" height="170" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="323" valign="top">
+
+
+
+
+<div id="masterdiv">
+
+	<div style="margin-left:14px; margin-top:22px " onclick="SwitchMenu('sub1')">
+	    <table width="307" height="20" border="0" cellspacing="0" cellpadding="0" background="images/table.jpg">
+    <tr>
+      <td width="21" valign="top"><img src="images/spacer.gif"></td>
+	  <td width="150" valign="top">
+	  <div style="margin-left:6px; margin-top:1px; font-size:11px "><a href="#">Stretch Limousine</a></div>
+	  </td>
+	  <td width="49" valign="top">
+	  <div style="margin-top:1px " align="center">2005</div>
+	  </td>
+	  <td width="87" valign="top">
+	  <div style="margin-left:9px; margin-top:1px " class="red"><a href="reservations.php">Reserve Now</a></div>	  </td>
+    </tr>
+  </table>
+</div>
+	<span class="submenu" id="sub1">
+		<div style="margin-left:20px;">Fully equipped glowing bar with Johnny Walker Black Label and Red Label, Grey Goose Vodka, beers, sodas, and snacks for your enjoyment. </div>
+	</span><div style="margin-left:14px;" onclick="SwitchMenu('sub2')">
+	<table width="307" height="20" border="0" cellspacing="0" cellpadding="0" background="images/table.jpg">
+  <tr>
+    <td width="21" valign="top"><img src="images/spacer.gif"></td>
+	<td width="150" valign="top">
+	<div style="margin-left:6px; margin-top:1px; font-size:11px "><a href="#">Lincoln Town Car</a></div>
+	</td>
+	<td width="49" valign="top">
+	<div style="margin-top:1px " align="center">2005</div>
+	</td>
+	<td width="87" valign="top">
+	<div style="margin-left:9px; margin-top:1px " class="red"><a href="reservations.php">Reserve Now</a></div>	</td>
+  </tr>
+</table>
+</div>
+	<span class="submenu" id="sub2">
+		<div style="margin-left:20px;">We provide water, newspapers, magazines , and snacks. </div>
+	</span>
+
+	<div style="margin-left:14px " onclick="SwitchMenu('sub3')"><table width="307" height="20" border="0" cellspacing="0" cellpadding="0" background="images/table.jpg">
+  <tr>
+    <td width="21" valign="top"><img src="images/spacer.gif"></td>
+	<td width="150" valign="top">
+	<div style="margin-left:6px; margin-top:1px; font-size:11px "><a href="#">Mercedes S500</a></div>
+	</td>
+	<td width="49" valign="top">
+	<div style="margin-top:1px " align="center">2005</div>
+	</td>
+	<td width="87" valign="top">
+	<div style="margin-left:9px; margin-top:1px " class="red"><a href="reservations.php">Reserve Now</a></div>	</td>
+  </tr>
+</table>
+</div>
+	<span class="submenu" id="sub3">
+		<div style="margin-left:20px;">Fully loaded sports package with navigation.</div>
+	</span>
+	
+	<div style="margin-left:14px;" onclick="SwitchMenu('sub4')"><table width="307" height="20" border="0" cellspacing="0" cellpadding="0" background="images/table.jpg">
+  <tr>
+    <td width="21" valign="top"><img src="images/spacer.gif"></td>
+	<td width="150" valign="top">
+	<div style="margin-left:6px; margin-top:1px; font-size:11px "><a href="#">Suburban</a></div>
+	</td>
+	<td width="49" valign="top">
+	<div style="margin-top:1px " align="center">2005</div>
+	</td>
+	<td width="87" valign="top">
+	<div style="margin-left:9px; margin-top:1px " class="red"><a href="reservations.php">Reserve Now</a></div>	</td>
+  </tr>
+</table>
+</div>
+	<span class="submenu" id="sub4">
+		<div style="margin-left:20px;">Fully loaded with navigation and a home entertainment system with TV's . </div>
+	</span>
+	<div style="margin-left:14px;" onclick="SwitchMenu('sub5')"><table width="307" height="20" border="0" cellspacing="0" cellpadding="0" background="images/table.jpg">
+  <tr>
+    <td width="21" valign="top"><img src="images/spacer.gif"></td>
+	<td width="150" valign="top">
+	<div style="margin-left:6px; margin-top:1px; font-size:11px "><a href="#">BMW 745 LI</a></div>
+	</td>
+	<td width="49" valign="top">
+	<div style="margin-top:1px " align="center">2005</div>
+	</td>
+	<td width="87" valign="top">
+	<div style="margin-left:9px; margin-top:1px " class="red"><a href="reservations.php">Reserve Now</a></div>	</td>
+  </tr>
+</table>
+</div>
+	<span class="submenu" id="sub5">
+		<div style="margin-left:20px;">Fully loaded sports package with navigation </div>
+	</span>
+
+</div>
+
+
+
+
+<div style="margin-left:14px; margin-top:14px; width:300px ">As you relax and enjoy your trip, you can sit back in luxury and enjoy reading the daily newspapers or popular magazines on hand. You'll also find all our cars equipped with a mini-bar for your or your clients' enjoyment. If you want a particular brand of beverage or snack, all you need to do is make the request, and it will be available!
+    </div>
+	</td>
+	</tr>
+</table></td>
+  </tr>
+</table>
+	
+	</td>
+  </tr>
+</table>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=727 HEIGHT=82 ALT="" valign="top" background="images/bottom.jpg">
+		  <div align="center" style="margin-top:20px " class="copy">FashionLimo.com &copy; 2004<img src="images/spacer.gif" width="73" height="1"><a href="index.html"><img src="images/house.jpg" width="11" height="12" border="0"></a><img src="images/spacer.gif" width="22" height="1"><a href="contact.php"><img src="images/mail.jpg" width="13" height="9" border="0"></a><img src="images/spacer.gif" width="240" height="8"><img src="images/spacer.gif" width="200" height="8"><a href="#" class="copy"><br>
+                <br>
+                <font size="2">Created by </font></a><font size="2"><a href="http://www.mediabandits.com" target="_blank"><font color="#FFFFFF">MediaBandits.com</font></a></font> </div></TD>
+	</TR>
+	<TR><TD WIDTH=727 HEIGHT=70 ALT=""><img src="images/spacer.gif"></TD>
+	</TR>
+</TABLE>
+		</TD>
+		<TD>
+			<IMG SRC="images/right.jpg" WIDTH=25 HEIGHT=902 ALT=""></TD>
+	</TR>
+</TABLE></td>
+    <td width="50%" background="images/right_px.jpg" style="background-position:top; background-repeat:repeat-x "><img src="images/spacer.gif"></td>
+  </tr>
+</table>
+
+<!-- End ImageReady Slices -->
+</BODY>
+</HTML>

@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>Reservation Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/javascript" src="reservationvalidation.js"></script>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<table border="0" align="center" width="100%" height="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="middle" align="center"> <FORM METHOD="POST" name="reservation" ACTION="form.php" onSubmit="return validateinfo()">
+        <table border="0" align="center" width="60%" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td valign="middle" colspan="6"><font face="tahoma" size="-2"><b>Please 
+              provide the following contact information: (<font color="#FF0000">*</font> 
+              - Required)</b></font></td>
+          </tr>
+          <tr> 
+            <td valign="middle"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>First 
+              Name:</font></td>
+            <td valign="middle"><INPUT TYPE="text" name="firstName" size="15"></td>
+            <td valign="middle"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Last 
+              Name:</font></td>
+            <td valign="middle"><INPUT TYPE="text" name="lastName" size="15"></td>
+            <td valign="middle"><font face="tahoma" size="-2">Middle Initial:</font></td>
+            <td valign="middle"><INPUT TYPE="text" name="middleName" size="5" maxlength="1"></td>
+          </tr>
+          <tr>
+            <td valign="middle" colspan="1"><font face="tahoma" size="-2">Organization:</font></td>
+            <td valign="middle" colspan="5"><INPUT TYPE="text" name="organization" size="50"></td>
+          </tr>
+          <tr> 
+            <td valign="middle" colspan="1"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Primary 
+              Phone:</font></td>
+            <td valign="middle" colspan="2"><INPUT TYPE="text" name="primaryPhone" size="25"></td>
+            <td valign="middle" colspan="1"><font face="tahoma" size="-2">Secondary 
+              Phone:</font></td>
+            <td valign="middle" colspan="2"><INPUT TYPE="text" name="secondaryPhone" size="25"></td>
+          </tr>
+          <tr>
+            <td valign="middle" colspan="1"><font face="tahoma" size="-2">FAX:</font></td>
+            <td valign="middle" colspan="2"><INPUT TYPE="text" name="fax" size="25"></td>
+            <td valign="middle" colspan="1"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>E-mail:</font></td>
+            <td valign="middle" colspan="2"><INPUT TYPE="text" name="email" size="25"></td>
+          </tr>
+        </table>
+        <br>
+        <table border="0" align="center" width="60%" cellspacing="0" cellpadding="2">
+          <tr>
+            <td valign="top"><font face="tahoma" size="-2"><b>Reservation Information:</b></font></td>
+          </tr>
+          <tr> 
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Date 
+              of Pick-Up:</font></td>
+            <td valign="top"> <select size="1" name="pickupMonth">
+                <option value="">(month)</option>
+                <option value="January - 01">January - 01</option>
+                <option value="February - 02">February - 02</option>
+                <option value="March - 03">March - 03</option>
+                <option value="April - 04">April - 04</option>
+                <option value="May - 05">May - 05</option>
+                <option value="June - 06">June - 06</option>
+                <option value="July - 07">July - 07</option>
+                <option value="August - 08">August - 08</option>
+                <option value="September - 09">September - 09</option>
+                <option value="October - 10">October - 10</option>
+                <option value="November - 11">November - 11</option>
+                <option value="December - 12">December - 12</option>
+              </select> </td>
+            <td valign="top"> <select size="1" name="pickupDate">
+                <option value="">(date)</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select> </td>
+            <td valign="top"> <select size="1" name="pickupYear">
+                <option value="">(year)</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+              </select> </td>
+          </tr>
+          <tr> 
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Time 
+              of Pick-Up:</font></td>
+            <td valign="top"> <select size="1" name="pickupHour">
+                <option value="">(hour)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select> </td>
+            <td valign="top"> <select size="1" name="pickupMinutes">
+                <option value="">(minutes)</option>
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select> </td>
+            <td valign="top"> <select name="pickupAMPM" size="1" id="pickupAMPM">
+                <option value="">(am/pm)</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select> </td>
+          </tr>
+        </table>
+        <table border="0" align="center" width="60%" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Arrival, 
+              Departure, or Hourly?</font></td>
+            <td valign="top"> <select size="1" name="rentalType">
+                <option value="">(select)</option>
+                <option value="Arrival">Arrival</option>
+                <option value="Departure">Departure</option>
+                <option value="Hourly">Hourly</option>
+              </select> </td>
+            <td valign="top"><font face="tahoma" size="-2">If hourly, how many 
+              hours</font></td>
+            <td valign="top"> <select size="1" name="rentalHours">
+                <option value="">N/A</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="24">24+</option>
+              </select> </td>
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Airport 
+              and Flight Information:</font></td>
+            <td valign="top"> <select size="1" name="airportSelection">
+                <option selected value="">(N/A)</option>
+                <option value="LGA">LGA</option>
+                <option value="JFK">JFK</option>
+                <option value="Newark">Newark</option>
+                <option value="McArthur">McArthur</option>
+                <option value="Teterboro">Teterboro</option>
+                <option value="other">other</option>
+              </select> </td>
+          </tr>
+        </table>
+        <br>
+        <table border="0" align="center" width="60%" cellspacing="0" cellpadding="2">
+          <tr>
+            <td valign="top"><INPUT TYPE="text" name="otherAirport" size="26" value="(if other airport)" onfocus="this.value='';" onblur="if(this.value=='') this.value='(if other airport)';"></td>
+            <td valign="top"><INPUT TYPE="text" name="flightInfo" size="26" value="(please enter flight information)" onfocus="this.value='';" onblur="if(this.value=='') this.value='(please enter flight information)';"></td>
+            <td valign="top"><INPUT TYPE="text" name="pickupAddress" size="26" value="(leave blank if airport pick-up)" onfocus="this.value='';" onblur="if(this.value=='') this.value='(leave blank if airport pick-up)';"></td>
+          </tr>
+        </table>
+        <br>
+        <table border="0" align="center" width="60%" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Destination 
+              address:</font></td>
+            <td valign="top"><INPUT TYPE="text" name="destinationAddress" size="65"></td>
+          </tr>
+          <tr> 
+            <td valign="top"><font face="tahoma" size="-2"><b><font color="#FF0000">*</font></b>Vehicle 
+              Requested:</font></td>
+            <td valign="top"> <select size="1" name="vehicleRequested">
+                <option selected value="">(select)</option>
+                <option value="Stretch Limousine">Stretch Limousine</option>
+                <option value="Mercedes-Benz S500">Mercedes-Benz S500</option>
+		<option value="BMW 745 LI">BMW 745 LI</option>
+                <option value="Suburban">Suburban</option>
+                <option value="10 Passenger Stretch Limousine">10 Passenger Stretch 
+                Limousine</option>
+                <option value="Lincoln Town Car">Lincoln Town Car</option>
+              </select> </td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="tahoma" size="-2">Additional Information 
+              or Comments:</font></td>
+            <td valign="top"><textarea name="comments" cols="44" rows="4" wrap="VIRTUAL"></textarea></td>
+          </tr>
+        </table>
+        <center>
+          <input type="submit" value="Send">
+          <input type="reset" value="Reset" name="Reset">
+        </center>
+      </form></td>
+  </tr>
+</table>
+<p align="center"><img src="credit.jpg" width="152" height="25"></p>
+</body>
+</html>
